@@ -1,81 +1,70 @@
-/* Reset some default styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} 
-
-/* Body styles */
+/* Basic reset and styling for body */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header styles */
+/* Style your header and navigation */
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+/* Logo styling */
 .logo img {
-    width: 100px;
-    height: auto;
+    height: 50px;
+}
+
+/* Navigation list styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    padding: 0;
 }
 
 nav ul li {
     margin-left: 20px;
 }
 
+/* Style the links */
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
+/* Hover effect for links */
 nav ul li a:hover {
-    color: #007BFF;
+    background-color: #ddd;
 }
 
-/* Description section */
-.description {
-    padding: 20px;
+/* Optional: highlight the current section link */
+nav ul li a.active {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Style for sections to add spacing */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Style for the footer */
+footer {
+    background-color: #f8f8f8;
     text-align: center;
-    background-color: #fff;
-    margin-top: 10px;
-}
-/* Products section */
-.products {
     padding: 20px;
-    background-color: #fff;
-    margin-top: 10px;
-}
-
-.products h3 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-}
-
-/* Product images */
-.product-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    /* Optional: add a hover effect */
-    transition: transform 0.2s;
-}
-
-.product-item img:hover {
-    transform: scale(1.05);
+    margin-top: 40px;
 }
